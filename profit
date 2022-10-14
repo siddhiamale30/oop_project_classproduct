@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class profit
+	{
+protected:
+	int cp,sp,profit,loss;
+public:
+	void getdata()
+	{
+		cout<<"ENTER THE COST PRICE:"<<endl;
+		cin>>cp;
+		cout<<"ENTER THE SELLING PRICE:"<<endl;
+		cin>>sp;
+		
+	}
+	void display()
+	{
+		if(sp>cp)
+		{
+			profit=sp-cp;
+			cout<<"profit="<<profit<<endl;	
+		}
+		else if(cp>sp)
+		{
+		
+		loss=cp-sp;
+		
+		cout<<"loss="<<loss<<endl;
+	    }
+	    
+	    else
+	    {
+	    	cout<<"no profit no loss.";
+		}
+	}
+	};
+	
+int main()
+{
+	profit p;
+	p.getdata();
+	p.display();
+	return 0;
+}
